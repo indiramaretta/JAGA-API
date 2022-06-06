@@ -35,7 +35,7 @@ class ContohResource(Resource):
 #CATATAN : DIR ABIS INI KAMU TAMBAHIN YANG BARU INI KAMU JALANIN ULANG YA <3
 
 #setup resourcenya 
-api.add_resource(ContohResource, "/api", methods=["GET"])
+api.add_resource(ContohResource, "/api", methods=["GET", "POST"]) #adira bagian ini kamu copy ulang ya hwhwhw, nambahin "POST"
 
 if __name__== "__main__": 
     app.run(debug=True, port=5005)
