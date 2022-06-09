@@ -30,3 +30,6 @@ pip install numpy
 pip install scikit-learn==0.24.2 #versi scikit ini nanti diubah aja pas kamu udh selesai cek
 ```
 
+#Deploying MODEL ML 
+https://medium.com/xebia-france/how-to-deploy-your-own-ml-model-to-gcp-in-5-simple-steps-bf2b5898c1ab
+
