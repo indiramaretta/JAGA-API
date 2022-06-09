@@ -12,7 +12,7 @@ app = Flask(__name__)
 api = Api(app)
 
 # load the pickled model and X_train
-X_train = pickle.load(open('X_train.sav', 'rb')) #ini aku masih bingung x_train ini apaan 
+X_train = pickle.load(open('X_train.sav', 'rb')) #ini aku masih bingung x_train ini apaan, aku butuh bantuan pengalaman MLmu
 model = pickle.load(open('model.pkl', 'rb'))
 
 # feature scale data after fitting scalar object to pickled training set
@@ -20,63 +20,46 @@ sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 
 # inisiasi variabel kosong bertipe dictionary 
-identitas = {} #variable global, ini udh dalam bentuk dictionary = json (berarti udh json)
+Resource = {} #variable global, ini udh dalam bentuk dictionary = json (berarti udh json)
 
 #membuat class Resource 
 class ContohResource(Resource):
     #method get and post 
     def get(self):
         # get request that returns the JSON format for API request
-        return {"JSON data format": {"Pregnancies": 5,
-                                     "Glucose": 32,
-                                     "BloodPressure": 43,
-                                     "SkinThickness": 23,
-                                     "Insulin":22,
-                                     "BMI": 54,
-                                     "DiabetesPedigreeFunction":  43,
-                                     "Age": 50
+        return {"JSON data format": {"Category": 18,
+                                     "DayOfWeek": 7,
+                                     "Dates",
+                                     "Address",
+                                     "PdDistrict",
+                                     "X",
+                                     "Y"
                                     }
                 }, 200
-    urce
-class Records(Resource):
-    def get(self):
-        # get request that returns the JSON format for API request
-        return {"JSON data format": {"Pregnancies": 5,
-                                     "Glucose": 32,
-                                     "BloodPressure": 43,
-                                     "SkinThickness": 23,
-                                     "Insulin":22,
-                                     "BMI": 54,
-                                     "DiabetesPedigreeFunction":  43,
-                                     "Age": 50
-                                    }
-                }, 200
-
     def post(self):
         # post request
         # make model and X_train global variables
         global model
-        global X_train
+        global X_train #again aku gk tahu ini X_Train ini apaan 
         # it gets patient's record and returns the ML model's prediction
         data = request.get_json()
 
         try:
-            pregnancies = int(data["Pregnancies"])
-            glucose = int(data["Glucose"])
-            bp = int(data["BloodPressure"])
-            st = int(data["SkinThickness"])
-            insulin = int(data["Insulin"])
-            bmi = float(data["BMI"])
-            dpf = float(data["DiabetesPedigreeFunction"])
-            age = int(data["Age"])
+            category = int(data["Category"])
+            daysofweek = object(data["DaysofWeek"])
+            dates = object(data["Dates"])
+            address = object(data["Address"])
+            pddistrict = object(data["PdDistrict"])
+            x = float(data["X"])
+            y = float(data["Y"])
 
             # model expects a 2D array
-            new_record = [[pregnancies, glucose, bp, st, insulin, bmi, dpf, age]]
+            new_record = [[category, daysofweek, dates, address, pddistrict, x, y]]
             # feature scale the data
             scaled_data = sc.transform(new_record)
             # dictionary containing the diagnosis with the key as the model's prediction
-            diagnosis = {0: 'Your Result is Normal',
-                         1: 'Diabetes Detected'
+            diagnosis = {0: 'Area Aman',
+                         1: 'Area Kurang Aman'
                         }
             # pass scaled data to model for prediction
             new_pred = model.predict(scaled_data)[0]
@@ -85,14 +68,13 @@ class Records(Resource):
             return {'Diagnosis': result}, 200
         except:
             # if client sends the wrong request or data type then return correct format
-            return {'Error! Please use this JSON format': {"Pregnancies": 5,
-                                              "Glucose": 32,
-                                              "BloodPressure": 43,
-                                              "SkinThickness": 23,
-                                              "Insulin":22,
-                                              "BMI": 33.6,
-                                              "DiabetesPedigreeFunction":  1.332,
-                                              "Age": 50
+            return {'Error! Please use this JSON format': {"Category": 18,
+                                              "DayOfWeek": 7,
+                                              "Dates",
+                                              "Address",
+                                              "PdDistrict",
+                                              "X",
+                                              "Y"
                                              }}, 500
       
 #CATATAN : DIR ABIS INI KAMU TAMBAHIN YANG BARU INI KAMU JALANIN ULANG YA <3
