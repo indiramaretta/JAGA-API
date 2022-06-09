@@ -27,6 +27,6 @@ print('scikit-learn version is', sklearn.__version__)
 pip install flask
 pip install flask-restful
 pip install numpy
-pip install scikit-learn==0.24.2
+pip install scikit-learn==0.24.2 #versi scikit ini nanti diubah aja pas kamu udh selesai cek
 ```
 
