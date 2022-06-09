@@ -1,6 +1,9 @@
 # JAGA-API
 Backend Repository from JAGA Application
 
+Sources : https://www.section.io/engineering-education/integrate-ml-to-flask-api-and-deploy-to-heroku/
+ML MODEL : https://www.section.io/engineering-education/diagnose-diabetes-with-svm/
+
 #INSTALL SEBELUM NGODING YA 
 ```
 pip install virtualenv
