@@ -20,3 +20,8 @@ pip install flask-restful
 pip install numpy
 pip install scikit-learn==0.24.2
 
+```
+function test() {
+  console.log("notice the blank line before this function?");
+}
+```
