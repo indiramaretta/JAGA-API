@@ -58,9 +58,11 @@ class ContohResource(Resource):
             # feature scale the data
             scaled_data = sc.transform(new_record)
             # dictionary containing the diagnosis with the key as the model's prediction
-            diagnosis = {0: 'Area Aman',
-                         1: 'Area Kurang Aman' #kalau mau display result dari pembuatan ini gimana yak ? soalnya ini main diagnosis gitu 
-                        }
+            #aku masih bingung outputnya ini apaan TT, soalnya harusnya pake Google Maps API gitu kalau mau digabungin sama MLnya  
+            #a = pd.DataFrame()
+            #for i, index in enumerate(out):
+            #a.loc[i, 'Subject'] = df_news['Subject'][index]
+            #diagnosis.loc[c['Hasil Prediksi'] == c['Category'] , 'Keterangan'] = 'True'
             # pass scaled data to model for prediction
             new_pred = model.predict(scaled_data)[0]
             # get corresponding value from the diagnosis dictionary (using the model prediction as the key)
@@ -80,7 +82,7 @@ class ContohResource(Resource):
 #CATATAN : DIR ABIS INI KAMU TAMBAHIN YANG BARU INI KAMU JALANIN ULANG YA <3
 
 #setup resourcenya 
-api.add_resource(ContohResource, "/api", methods=["GET", "POST"]) #adira bagian ini kamu copy ulang ya hwhwhw, nambahin "POST"
+api.add_resource(ContohResource, "/Jaga", methods=["GET", "POST"]) #adira bagian ini kamu copy ulang ya hwhwhw, nambahin "POST"
 
 if __name__== "__main__": 
     app.run(debug=True, port=5005)
