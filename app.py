@@ -59,7 +59,7 @@ class ContohResource(Resource):
             scaled_data = sc.transform(new_record)
             # dictionary containing the diagnosis with the key as the model's prediction
             diagnosis = {0: 'Area Aman',
-                         1: 'Area Kurang Aman'
+                         1: 'Area Kurang Aman' #kalau mau display result dari pembuatan ini gimana yak ? soalnya ini main diagnosis gitu 
                         }
             # pass scaled data to model for prediction
             new_pred = model.predict(scaled_data)[0]
