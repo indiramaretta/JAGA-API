@@ -5,6 +5,8 @@ Sources : https://www.section.io/engineering-education/integrate-ml-to-flask-api
 
 ML MODEL : https://www.section.io/engineering-education/diagnose-diabetes-with-svm/
 
+Google API MAP Implementation : https://thedatafrog.com/en/articles/show-data-google-map-python/
+
 #INSTALL SEBELUM NGODING YA 
 ```
 pip install virtualenv
