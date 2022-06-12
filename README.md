@@ -111,6 +111,8 @@ const email = "PUT THE YOUR EMAIL FROM CREDENTIALS->SERVICE ACCCOUNTS -> EMAIL t
      }
     
   }
+  ...
+  }
 ```
 
 #The output will be in form of JSON file in the RealTimeDatabase
