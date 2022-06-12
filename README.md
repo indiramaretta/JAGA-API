@@ -19,6 +19,16 @@ pip install pandas
 pip install lightgbm
 ```
 
+#input models (download the models, put in the same file as your environment) 
+
+
+#download the app.py (also put in the same file as your environment) 
+
+#run the application 
+```
+python -m flask run
+```
+
 #Deploying MODEL ML 
 https://medium.com/xebia-france/how-to-deploy-your-own-ml-model-to-gcp-in-5-simple-steps-bf2b5898c1ab
 
