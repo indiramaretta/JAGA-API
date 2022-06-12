@@ -6,8 +6,8 @@ The API was created using Flask in VScode. Here is the step for it
 #Install the environment
 ```
 pip install virtualenv
-virtualenv <nama env>
-<nama env>\Scripts\activate.bat
+virtualenv <PUT YOUR ENVIRONMENT NAME >
+<YOUR ENVIRONMENT NAME>\Scripts\activate.bat
 python -m pip install --upgrade pip
 ```
 
@@ -20,7 +20,7 @@ pip install lightgbm
 ```
 
 #input models (download the models, put in the same file as your environment) 
-
+#The file type for the application we are using is .pkl and the machine learning mode is LightGBM
 
 #download the app.py (also put in the same file as your environment) 
 
@@ -28,7 +28,14 @@ pip install lightgbm
 ```
 python -m flask run
 ```
+-----------------------------------------------------------------------------------------------------------------------------------
+##DEPLOY FLASK APPLICATION IN GOOGLE CLOUD 
 
-#Deploying MODEL ML 
-https://medium.com/xebia-france/how-to-deploy-your-own-ml-model-to-gcp-in-5-simple-steps-bf2b5898c1ab
+#Create your Virtual Machine 
 
+
+-----------------------------------------------------------------------------------------------------------------------------------
+##CONNECTING SPREADSHEET DATA TO FIREBASE 
+
+#Create your own Spreadsheet database 
+![image](https://user-images.githubusercontent.com/99376250/173258025-ee6bf1bd-83ad-4079-980c-8143f7dc99c8.png)
