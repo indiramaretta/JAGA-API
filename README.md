@@ -107,7 +107,7 @@ const email = "PUT THE YOUR EMAIL FROM CREDENTIALS->SERVICE ACCCOUNTS -> EMAIL t
        data.x = sourceData[i][4];
        data.y = sourceData[i][5];
     
-       firestore.createDocument("datajaga9",data);
+       firestore.createDocument("<NAMA REALTIMEDATABASE>",data);
      }
     
   }
