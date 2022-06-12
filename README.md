@@ -1,7 +1,7 @@
 # JAGA-API
 The API was used to deploy ML model to Google Cloud. We created it using Flask in VScode. Here is the step for it 
 
-#Install the environment
+# Install the environment
 ```
 pip install virtualenv
 virtualenv <PUT YOUR ENVIRONMENT NAME >
@@ -9,7 +9,7 @@ virtualenv <PUT YOUR ENVIRONMENT NAME >
 python -m pip install --upgrade pip
 ```
 
-#Install the variable
+# Install the variable
 ```
 pip install flask
 pip install numpy 
@@ -17,47 +17,47 @@ pip install pandas
 pip install lightgbm
 ```
 
-#input models (download the models, put in the same file as your environment) 
-#The file type for the application we are using is .pkl and the machine learning mode is LightGBM
+# input models (download the models, put in the same file as your environment) 
+# The file type for the application we are using is .pkl and the machine learning mode is LightGBM
 
-#download the app.py from the repository (also put in the same file as your environment) 
+# download the app.py from the repository (also put in the same file as your environment) 
 
-#run the application 
+# run the application 
 ```
 python -m flask run
 ```
 -----------------------------------------------------------------------------------------------------------------------------------
-##DEPLOY FLASK APPLICATION IN GOOGLE CLOUD 
+## DEPLOY FLASK APPLICATION IN GOOGLE CLOUD 
 
-#Create your Virtual Machine 
+# Create your Virtual Machine 
 
 
 -----------------------------------------------------------------------------------------------------------------------------------
-##CONNECTING SPREADSHEET DATA TO FIREBASE 
+## CONNECTING SPREADSHEET DATA TO FIREBASE 
 
-#Create your own Spreadsheet database 
+# Create your own Spreadsheet database 
 ![image](https://user-images.githubusercontent.com/99376250/173258025-ee6bf1bd-83ad-4079-980c-8143f7dc99c8.png)
 
-#Hover to Extensions -> App Script 
+# Hover to Extensions -> App Script 
 ![image](https://user-images.githubusercontent.com/99376250/173258064-9db7f4c9-1ae7-4cec-8e8f-69a9f244b79d.png)
 ![image](https://user-images.githubusercontent.com/99376250/173258081-52e93ea6-60f3-4571-92f4-5d9491326f93.png)
 
-#Input your Firebase Library by copy paste this API KEY 
+# Input your Firebase Library by copy paste this API KEY 
 ```
 FIREBASE_API_KEY = 1VUSl4b1r1eoNcRWotZM3e87ygkxvXltOgyDZhixqncz9lQ3MjfT1iKFw
 ```
-#Install the Latest Version 
+# Install the Latest Version 
 ![image](https://user-images.githubusercontent.com/99376250/173258200-94a5c0fa-4db9-41b2-b506-a92dc33d92c3.png)
 
-#Generate your own Private Key in Google Cloud Console (API&Services -> Credentials -> Service Accounts). 
-#Make sure the Google Cloud Platform that you are using is the same platform that you use for Cloud Firebase
-#Here is some of the important things that you need to look at 
+# Generate your own Private Key in Google Cloud Console (API&Services -> Credentials -> Service Accounts). 
+# Make sure the Google Cloud Platform that you are using is the same platform that you use for Cloud Firebase
+# Here is some of the important things that you need to look at 
 ```
 CLIENT_EMAIL
 PRIVATE_KEY
 PROJECT_ID
 ```
-#Implemeting the Code. Next put your credentials first, in the top of your code. 
+# Implemeting the Code. Next put your credentials first, in the top of your code. 
 ```
 function datajaga() {
 const email = "PUT THE YOUR EMAIL FROM CREDENTIALS->SERVICE ACCCOUNTS -> EMAIL that was chosen for App Engine";
@@ -67,7 +67,7 @@ const email = "PUT THE YOUR EMAIL FROM CREDENTIALS->SERVICE ACCCOUNTS -> EMAIL t
  .....
  }
 ```
-#After putting your credentials, you could generate variabel that will be used for your function and where and how you will get the data 
+# After putting your credentials, you could generate variabel that will be used for your function and where and how you will get the data 
 ```
 {
 ...
@@ -88,7 +88,7 @@ const email = "PUT THE YOUR EMAIL FROM CREDENTIALS->SERVICE ACCCOUNTS -> EMAIL t
 ...
 }
 ```
-#Looping To get the Data and the post it as a form of RealTime Database
+# Looping To get the Data and the post it as a form of RealTime Database
 ```
  for (var i=0;i<panjangsumber;i++){
 
@@ -115,5 +115,5 @@ const email = "PUT THE YOUR EMAIL FROM CREDENTIALS->SERVICE ACCCOUNTS -> EMAIL t
   }
 ```
 
-#The output will be in form of JSON file in the RealTimeDatabase
+# The output will be in form of JSON file in the RealTimeDatabase
 ![image](https://user-images.githubusercontent.com/99376250/173258782-864e5205-007e-4bcb-bbfb-2eaac64ea3db.png)
