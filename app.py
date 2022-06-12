@@ -8,7 +8,7 @@ import string
 import random
 
 # Load the model
-lgbModel = lgb.Booster(model_file="Crime Prediction/model/lgb_gbdt5.pkl")
+lgbModel = lgb.Booster(model_file="model/lgb_gbdt5.pkl")
 #jangan lupa buat path untuk folder file pkl
 
 app = Flask(__name__)
@@ -18,21 +18,19 @@ def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
 
 def fixDF(data):
     data = data.astype({
-          'LotArea':int
-        , 'Neighborhood':'category'
-        , 'Condition1':'category'
-        , 'Condition2':'category'
-        , 'OverallQual':int
-        , 'OverallCond':int
-        , 'YearBuilt':int
-        , 'SaleCondition':'category'
+          'Category':'category'
+        , 'DayOfWeek': string
+        , 'Dates':int
+        , 'Address':string
+        , 'PdDistrict':string
+        , 'X Longitude':int
+        , 'Y Latitude':int
     })
     return data
 
 @app.route("/jaga", methods = ['GET','POST'])
 def user():
     if request.method == 'GET':
-        # Exists solely to make sure the running service has updated
         return id_generator()
 
     if request.method == 'POST':
