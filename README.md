@@ -48,6 +48,8 @@ python -m flask run
 gcloud builds submit --tag gcr.io/<project_id>/<function_name>
 gcloud run deploy --image gcr.io/<project_id>/<function_name> --platform managed
 ```
+![image](https://user-images.githubusercontent.com/99376250/173280799-209bfc9f-b475-4a61-a837-86f2a7506a08.png)
+
 -----------------------------------------------------------------------------------------------------------------------------------
 ## CONNECTING SPREADSHEET DATA TO FIREBASE 
 
