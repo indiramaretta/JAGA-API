@@ -1,7 +1,7 @@
 # JAGA-API
 The API was used to deploy ML model to Google Cloud. We created it using Flask in VScode. Here is the step for it 
 
-# Install the environment
+ Install the environment
 ```
 pip install virtualenv
 virtualenv <PUT YOUR ENVIRONMENT NAME >
@@ -9,7 +9,7 @@ virtualenv <PUT YOUR ENVIRONMENT NAME >
 python -m pip install --upgrade pip
 ```
 
-# Install the variable
+ Install the variable
 ```
 pip install flask
 pip install numpy 
@@ -17,12 +17,13 @@ pip install pandas
 pip install lightgbm
 ```
 
-# input models (download the models, put in the same file as your environment) 
-# The file type for the application we are using is .pkl and the machine learning mode is LightGBM
+Input models (download the models, put in the same file as your environment) 
 
-# download the app.py from the repository (also put in the same file as your environment) 
+The file type for the application we are using is .pkl and the machine learning mode is LightGBM
 
-# run the application 
+Download the app.py from the repository (also put in the same file as your environment) 
+
+Run the application 
 ```
 python -m flask run
 ```
