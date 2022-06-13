@@ -30,9 +30,19 @@ python -m flask run
 -----------------------------------------------------------------------------------------------------------------------------------
 ## DEPLOY FLASK APPLICATION IN GOOGLE CLOUD 
 
-1) Create your Virtual Machine 
+1) Activate Cloud Run API and Cloud Build API 
+![image](https://user-images.githubusercontent.com/99376250/173269907-86600edf-f000-4fd0-a877-bab7713da1c9.png)
+![image](https://user-images.githubusercontent.com/99376250/173269978-8ec97139-f044-47a1-b0ea-b3880989a27e.png)
 
+2) Install and init Google Cloud SDK
+![image](https://user-images.githubusercontent.com/99376250/173270052-8f39b86d-2c75-4063-89b5-ca36dbf08a18.png)
 
+3) Initialize the dockerfile file and .dockerignore file in the VsCode
+4) Build and Deploy the ML Flask Model
+```
+gcloud builds submit --tag gcr.io/<project_id>/<function_name>
+gcloud run deploy --image gcr.io/<project_id>/<function_name> --platform managed
+```
 -----------------------------------------------------------------------------------------------------------------------------------
 ## CONNECTING SPREADSHEET DATA TO FIREBASE 
 
