@@ -1,5 +1,7 @@
 # JAGA-API
+
 Here is link github for ML-Jaga = https://github.com/fnnysalsabilaa/JAGA.git
+
 Here is link github for MD-Jaga = https://github.com/RizaniHusyairi/JAGA.git
 
 The API was used to deploy ML model to Google Cloud. We created it using Flask in VScode. Here is the step for it 
